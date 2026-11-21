@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neville Family Reunion 2027</title>
+    <link rel="stylesheet" href="respect.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Neville<span>Gathering</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#schedule">Itinerary</a></li>
+            <li><a href="#rsvp">RSVP Panel</a></li>
+        </ul>
+    </nav>
+
+    <!-- Warm Family Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="location-badge">📍 Underberg Drakensberg Valleys</div>
+            <h1>Reconnecting Roots, <br><span class="highlight">Celebrating Legacy</span></h1>
+            <p>Welcome to the central portal for the upcoming Neville Family Reunion! Mark your calendars for a weekend filled with storytelling, generation portraits, shared meals, and lifelong memories.</p>
+            
+            <!-- Dynamic Countdown Display -->
+            <div class="countdown-container">
+                <div class="time-block"><span id="days">--</span><small>Days</small></div>
+                <div class="time-block"><span id="hours">--</span><small>Hours</small></div>
+                <div class="time-block"><span id="mins">--</span><small>Mins</small></div>
+            </div>
+            
+            <a href="#rsvp" class="btn-primary">Confirm Your Attendance</a>
+        </div>
+    </header>
+
+    <!-- Reunion Itinerary Timeline Section -->
+    <section id="schedule" class="section">
+        <h2 class="section-title">The Weekend Schedule</h2>
+        <p class="section-subtitle">Here is a baseline outline of our cross-generation activities.</p>
+        
+        <div class="grid margin-top">
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header day-one">Friday, 15 Oct</div>
+                <div class="day-details">
+                    <h3>Welcome & Meetup</h3>
+                    <p class="time">⏰ 16:00 onwards</p>
+                    <p class="activity-desc">Check-in at the main mountain lodge. Grab your registration goodie bags, family crest dynamic badges, and join us around the fire pit for a casual braai.</p>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header day-two">Saturday, 16 Oct</div>
+                <div class="day-details">
+                    <h3>Heritage Day & Gala</h3>
+                    <p class="time">⏰ 10:00 - 22:00</p>
+                    <p class="activity-desc">Morning family tree tracking and history workshops, followed by the grand generational group photograph. Evening catering features a formal dinner and memory presentation.</p>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header day-three">Sunday, 17 Oct</div>
+                <div class="day-details">
+                    <h3>Farewell Brunch</h3>
+                    <p class="time">⏰ 09:30 - 12:00</p>
+                    <p class="activity-desc">A relaxed farewell breakfast pool-side. Gift exchanges, contact directory updates, and closing remarks before departure check-outs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive RSVPs & Guest Tracker Widget -->
+    <section id="rsvp" class="section light-bg">
+        <h2 class="section-title">Family RSVP & Potluck Register</h2>
+        <div class="rsvp-container">
+            <p class="rsvp-intro">Help us finalize logistics parameters by updating your group size and registering any dishes you would love to bring along!</p>
+            
+            <div class="form-group">
+                <label for="family-name">Branch / Family Name:</label>
+                <input type="text" id="family-name" placeholder="e.g., Uncle Robert's Crew">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half">
+                    <label for="guest-count">Number of Attending Guests:</label>
+                    <input type="number" id="guest-count" value="2" min="1" max="15">
+                </div>
+                <div class="form-group half">
+                    <label for="potluck-item">Bringing to Potluck Braai:</label>
+                    <select id="potluck-item">
+                        <option value="Salad / Side Dish">Salad / Side Dish</option>
+                        <option value="Traditional Desserts">Traditional Desserts</option>
+                        <option value="Assorted Soft Drinks / Ice">Assorted Soft Drinks / Ice</option>
+                        <option value="Snacks for Kids">Snacks for Kids</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn-submit" onclick="logRSVP()">Submit RSVP to Register</button>
+
+            <!-- Dynamic Confirmation Output Dashboard -->
+            <div id="rsvp-success" class="success-box hidden">
+                <div class="success-icon">🌳</div>
+                <h3>RSVP Successfully Added!</h3>
+                <p id="success-copy">Thank you for updating our generation registry file metrics.</p>
+                
+                <div class="tracker-summary">
+                    <h4>Live Gathering Estimates:</h4>
+                    <p>Total Registered Neville Descendants: <strong id="live-total-guests">42</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Neville Family Council. Keeping Connections Strong Across Generations.</p>
+    </footer>
+
+    <script src="respect.js"></script>
+</body>
+</html>
